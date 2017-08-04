@@ -29,5 +29,20 @@ html, body {
         html .container section .banner img, body .container section .banner img {
           width: 100%;
           height: 100%; }
+    html .container footer, body .container footer {
+      width: 100%;
+      height: 1rem;
+      display: flex; }
+      html .container footer dl, body .container footer dl {
+        flex: 1;
+        text-align: center; }
+        html .container footer dl dt, body .container footer dl dt {
+          padding-top: 4px;
+          font-size: 32px;
+          color: #cccccc; }
+        html .container footer dl dd, body .container footer dl dd {
+          font-size: 22px;
+          color: green;
+          padding-top: 15px; }
 
 /*# sourceMappingURL=style.css.map */
