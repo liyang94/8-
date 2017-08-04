@@ -1,0 +1,33 @@
+html, body {
+  width: 100%;
+  height: 100%; }
+  html .container, body .container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.16rem; }
+    html .container header, body .container header {
+      height: 0.44rem;
+      width: 100%;
+      background: white;
+      display: flex; }
+      html .container header span, body .container header span {
+        flex: 1;
+        text-align: center;
+        line-height: 0.44rem;
+        border-right: 1px solid #000000; }
+    html .container section, body .container section {
+      flex: 1;
+      overflow: auto;
+      background: #cccccc; }
+      html .container section .banner, body .container section .banner {
+        width: 100%;
+        height: 473px; }
+        html .container section .banner img, body .container section .banner img {
+          width: 100%;
+          height: 100%; }
+
+/*# sourceMappingURL=style.css.map */
