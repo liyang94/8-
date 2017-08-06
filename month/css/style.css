@@ -1,0 +1,182 @@
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%; }
+  body .container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.16rem; }
+    body .container header .htop {
+      height: 0.44rem;
+      width: 100%;
+      text-align: center;
+      background: #000000;
+      color: #ffffff;
+      position: relative;
+      line-height: 0.44rem; }
+      body .container header .htop .icon-angleleft {
+        position: absolute;
+        left: 10px;
+        font-size: 22px; }
+      body .container header .htop .sp1 {
+        position: absolute;
+        left: 40px; }
+      body .container header .htop .sp2 {
+        position: absolute;
+        left: 80px; }
+      body .container header .htop .icon-shenglvehao1 {
+        position: absolute;
+        right: 10px; }
+    body .container header .hbottom {
+      height: 0.44rem;
+      background: #ffffff;
+      position: relative;
+      border-bottom: 1px solid #cccccc; }
+      body .container header .hbottom .sp3 {
+        position: absolute;
+        left: 15px;
+        top: 10px; }
+      body .container header .hbottom .search {
+        width: 200px;
+        height: 0.3rem;
+        margin-top: 0.07rem;
+        margin-left: 0.9rem;
+        border: 1px solid #cccccc;
+        position: relative;
+        line-height: 0.3rem; }
+        body .container header .hbottom .search .sp4 {
+          position: absolute;
+          left: 0.2rem; }
+        body .container header .hbottom .search input {
+          outline: none;
+          border: none;
+          padding-left: 40px; }
+      body .container header .hbottom .img1 {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        width: 0.6rem; }
+    body .container section {
+      flex: 1;
+      overflow: auto;
+      background: #cccccc; }
+      body .container section .remen .p3 {
+        width: 100%;
+        height: 0.44rem;
+        line-height: 0.44rem;
+        background: white;
+        font-weight: bold;
+        font-size: 22px; }
+      body .container section .remen .spanL {
+        width: 100%;
+        background: white; }
+        body .container section .remen .spanL span {
+          display: inline-block;
+          width: 20%;
+          height: 35px;
+          background: #cccccc;
+          border: 1px solid #cccccc;
+          border-radius: 35px;
+          text-align: center;
+          line-height: 35px;
+          margin: 5px 4px; }
+      body .container section .box {
+        width: 100%;
+        background: white;
+        box-sizing: border-box; }
+        body .container section .box .left {
+          float: left;
+          width: 150px;
+          height: 300px;
+          border: 1px solid #cccccc; }
+          body .container section .box .left ul li {
+            text-align: center;
+            line-height: 100px;
+            display: block;
+            width: 150px;
+            height: 100px;
+            border: 1px solid black; }
+        body .container section .box .right {
+          float: right;
+          width: 220px;
+          height: 300px;
+          border: 1px solid #cccccc; }
+          body .container section .box .right ul li {
+            width: 220px;
+            height: 100px;
+            border-bottom: 1px solid black; }
+            body .container section .box .right ul li img {
+              width: 100%;
+              height: 100%; }
+      body .container section .banner {
+        width: 100%;
+        height: 2.1rem; }
+        body .container section .banner img {
+          width: 100%;
+          height: 100%; }
+      body .container section .shang .p1 {
+        width: 100%;
+        height: 0.44rem;
+        text-align: center;
+        line-height: 0.44rem;
+        background: white; }
+      body .container section .shang .piclist {
+        width: 100%;
+        height: 2.1rem;
+        background: white; }
+        body .container section .shang .piclist img {
+          width: 100%;
+          height: 1.9rem; }
+    body .container footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      z-index: 999; }
+      body .container footer dl {
+        flex: 1;
+        text-align: center; }
+        body .container footer dl dt img {
+          width: 0.3rem; }
+        body .container footer dl dd {
+          color: #828282; }
+        body .container footer dl .high {
+          color: red; }
+  body .container1 {
+    background: white;
+    width: 100%;
+    height: 500px;
+    font-size: 0.16rem;
+    position: fixed;
+    top: 100%;
+    z-index: 999; }
+    body .container1 .remen .p3 {
+      width: 100%;
+      height: 0.44rem;
+      line-height: 0.44rem;
+      background: white;
+      font-weight: bold;
+      font-size: 22px; }
+    body .container1 .remen .spanL {
+      width: 100%;
+      background: white; }
+      body .container1 .remen .spanL span {
+        display: inline-block;
+        width: 20%;
+        height: 35px;
+        background: #cccccc;
+        border: 1px solid #cccccc;
+        border-radius: 35px;
+        text-align: center;
+        line-height: 35px;
+        margin: 5px 4px; }
+
+/*# sourceMappingURL=style.css.map */

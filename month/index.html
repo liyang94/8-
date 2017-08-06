@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body ng-app="myapp">
+<div class="container">
+    <div ui-view>
+
+    </div>
+</div>
+
+<div class="container1">
+    <div class="remen">
+        <p class="p3">热门搜索</p>
+        <div class="spanL">
+            <span>sasjd</span>
+            <span>按时</span>
+            <span>斯卡迪</span>
+            <span>事件的</span>
+        </div>
+        <div class="spanL">
+            
+            <span>斯卡迪</span>
+            <span>事件的</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    var app = angular.module('myapp', ['ui.router']);
+    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        $stateProvider.state('shouye', {
+            url: '/shouye',
+            templateUrl: 'view/shouye.html',
+            controller: 'shouyeCtl'
+        })
+
+                .state('fenlei', {
+                    url: '/fenlei',
+                    templateUrl: 'view/fenlei.html',
+                    // controller: 'fenleiCtl'
+                })
+
+
+                .state('fenlei.fengge', {
+                    url: '/fengge',
+                    
+                    templateUrl: 'view/template/views/fengge.html',
+                      
+                    
+                    // controller: 'fenleiCtl'
+                })
+
+                .state('fenlei.kongjian', {
+                    url: '/kongjian',
+                    
+                    templateUrl: 'view/template/views/kongjian.html',
+                    
+                    
+                    // controller: 'fenleiCtl'
+                })
+
+                .state('fenlei.pinlei', {
+                    url: '/pinlei',
+                    
+                    templateUrl: 'view/template/views/pinlei.html',
+                      
+                    
+                    // controller: 'fenleiCtl'
+                })
+
+                .state('wode', {
+                    url: '/wode',
+                    templateUrl: 'view/wode.html',
+                    // controller:'fenleiCtl'
+                })
+
+                // .state('wod', {
+                //     url: '/wod',
+                //     templateUrl: 'view/wode.html',
+                //     // controller:'fenleiCtl'
+                // })
+
+        $urlRouterProvider.otherwise('/fenlei')
+    }])
+
+    app.controller('shouyeCtl',function($scope){
+        new Swiper('.swiper-container',{
+            autoplay:1000,
+            loop:true
+        })
+
+        $scope.focuss=function(){
+
+            $('.container1').stop().animate({"top":".88rem"},1000)
+            
+        }
+
+        $scope.blurs=function(){
+
+            $('.container1').stop().animate({"top":"100%"},1000)
+            
+        }
+
+
+    })
+
+    
+
+    app.directive('footers', [function () {
+        return {
+            restrict: 'AE',
+            replace: true,
+            templateUrl: 'view/template/footers.html'
+        }
+    }])
+
+    app.directive('list', [function () {
+        return {
+            restrict: 'AE',
+            replace: true,
+            templateUrl: 'view/template/list.html'
+        }
+    }])
+
+
+</script>
+</body>
+</html>
