@@ -1,0 +1,142 @@
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.16rem; }
+  .container header .top {
+    width: 100%;
+    height: 0.5rem;
+    background: #ffffff;
+    line-height: 0.5rem;
+    display: flex; }
+    .container header .top span {
+      text-align: center;
+      flex: 1; }
+    .container header .top .sp1 {
+      color: #cccccc; }
+      .container header .top .sp1 .i1 {
+        transform: rotate(-90deg); }
+    .container header .top .sp2 {
+      color: #f00;
+      border-bottom: 2px solid #ff0000; }
+  .container header .bottom {
+    width: 100%;
+    height: 0.5rem;
+    background: #cccccc; }
+    .container header .bottom .nei {
+      width: 90%;
+      height: 0.4rem;
+      margin-left: 5%;
+      padding-top: 0.05rem;
+      display: flex; }
+      .container header .bottom .nei span {
+        flex: 1;
+        background: #ffffff;
+        border-right: 1px solid #cccccc;
+        color: #3a3a48;
+        text-align: center;
+        line-height: 0.4rem; }
+      .container header .bottom .nei .sp2 {
+        background: #fe4d4d;
+        color: #ffffff; }
+  .container section {
+    flex: 1;
+    overflow: auto;
+    background: #cccccc; }
+    .container section nav {
+      width: 100%;
+      height: 0.44rem;
+      line-height: 0.44rem;
+      display: flex;
+      background: #ffffff; }
+      .container section nav span {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #cccccc; }
+      .container section nav .sp3 {
+        color: #fe4d4d; }
+    .container section .scrolllist {
+      width: 100%; }
+      .container section .scrolllist .container1 {
+        width: 100%;
+        height: 6rem; }
+        .container section .scrolllist .container1 .scroller1 {
+          width: 100%; }
+          .container section .scrolllist .container1 .scroller1 .list {
+            width: 100%;
+            box-sizing: border-box;
+            background: white; }
+            .container section .scrolllist .container1 .scroller1 .list .p1 {
+              width: 75%;
+              height: 0.7rem;
+              position: relative;
+              line-height: 0.7rem;
+              text-align: left;
+              padding-left: 25%; }
+              .container section .scrolllist .container1 .scroller1 .list .p1 .img1 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 90px;
+                height: 80px; }
+              .container section .scrolllist .container1 .scroller1 .list .p1 .img2 {
+                width: 80px;
+                height: 47px;
+                position: absolute;
+                right: 100px;
+                top: 15px; }
+            .container section .scrolllist .container1 .scroller1 .list .p2 {
+              height: 0.4rem;
+              width: 100%;
+              display: flex; }
+              .container section .scrolllist .container1 .scroller1 .list .p2 span {
+                flex: 1;
+                text-align: center;
+                line-height: 0.4rem; }
+              .container section .scrolllist .container1 .scroller1 .list .p2 .sp4 {
+                position: relative; }
+                .container section .scrolllist .container1 .scroller1 .list .p2 .sp4 .img3 {
+                  width: 78px;
+                  height: 25px;
+                  position: absolute;
+                  right: 17px;
+                  top: 5px; }
+                .container section .scrolllist .container1 .scroller1 .list .p2 .sp4 .icon-angleleft1 {
+                  position: absolute;
+                  right: 5px;
+                  top: -4px;
+                  transform: rotate(180deg); }
+            .container section .scrolllist .container1 .scroller1 .list .p3 {
+              height: 0.4rem;
+              width: 100%;
+              display: flex; }
+              .container section .scrolllist .container1 .scroller1 .list .p3 span {
+                flex: 1;
+                text-align: center;
+                line-height: 0.4rem;
+                border-right: 1px solid #cccccc;
+                color: #686868; }
+  .container footer {
+    width: 100%;
+    height: 0.8rem;
+    display: flex;
+    background: #ffffff; }
+    .container footer dl {
+      flex: 1;
+      text-align: center; }
+      .container footer dl dt {
+        padding-top: 5px; }
+        .container footer dl dt img {
+          width: 40px;
+          height: 40px; }
+      .container footer dl dd {
+        padding-top: 10px; }
+
+/*# sourceMappingURL=style.css.map */
