@@ -22,6 +22,8 @@ html, body {
     .container header .top .sp1 {
       color: #cccccc; }
       .container header .top .sp1 .i1 {
+        position: absolute;
+        right: 10px;
         transform: rotate(-90deg); }
     .container header .top .sp2 {
       color: #f00;
@@ -93,7 +95,7 @@ html, body {
                 width: 80px;
                 height: 47px;
                 position: absolute;
-                right: 100px;
+                right: 10px;
                 top: 15px; }
             .container section .scrolllist .container1 .scroller1 .list .p2 {
               height: 0.4rem;
