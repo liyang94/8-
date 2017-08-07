@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+	<style>
+		.time{
+			width: 100%;
+			height: 150px;
+			background: pink;
+			color: black;
+			font-weight: bold;
+			font-size: 40px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<diV class="time">
+		00:00:00
+	</diV>
+	<script type="text/javascript">
+		
+		function addZero(val){
+			return	val<10?"0"+val:val; 
+		}
+		function shijiancha(targetT,nowT){
+
+			if(targetT>nowT){
+				var chaT = targetT.getTime() - nowT.getTime();
+				chaDay = Math.floor(chaT/(1000*60*60*24));
+				chaDayT = chaDay*(1000*60*60*24)
+				chaHours = Math.floor((chaT-chaDayT)/(1000*60*60))
+				chaHoursT = chaHours*(1000*60*60)
+				chaMinutes = Math.floor((chaT-chaDayT-chaHoursT)/(1000*60))
+				chaMinutesT = chaMinutes*(1000*60);
+				chaMiao = ((chaT-chaDayT-chaHoursT-chaMinutesT)/1000)
+				str="距离国庆节还有"+chaDay+"天"+chaHours+"小时"+chaMinutes
+				+"分钟"+chaMiao+"秒"
+			}else{
+				str="00:00:00"
+			}
+			
+			return str
+
+		}
+		var timer=setInterval(function(){
+			var nowT=new Date();
+			var targetT=new Date("2017/10/01 00:00:00")
+			var time=document.querySelector('.time');
+			time.innerHTML=shijiancha(targetT,nowT)
+		},1000)
+		
+	</script>
+</body>
+</html>
