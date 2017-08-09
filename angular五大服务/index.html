@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+    .left{
+        flex: 3
+    }
+    .right{
+        flex: 7
+    }
+    .left-item{
+        line-height: 40px;
+    }
+    .right-item{
+        line-height: 40px;
+    }
+    .name{
+        line-height: 20px;
+    }
+    .price{
+        line-height: 20px;
+    }
+    </style>
+</head>
+<body ng-app="app">
+    <div ng-controller="controller">
+        <my-directive></my-directive>
+    </div>
+</body>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/controller.js"></script>
+</html>
