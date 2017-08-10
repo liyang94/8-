@@ -1,0 +1,14 @@
+<style>
+
+</style>
+<div>
+    <table>
+        <thead>
+            <tr><th>课程名称</th><th>考试时间</th><th>分数</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in data.value.data"><td>{{item.testPaperName}}</td><td>{{item.testTime}}</td><td>{{item.score}}</td></tr>
+        </tbody>
+    </table>
+
+</div>
