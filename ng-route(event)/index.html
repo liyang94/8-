@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .footer{
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%
+        }
+        .footer a{
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-controller="controller">
+    <ng-view></ng-view>
+    <div class="footer">
+        <a href="#!home">home</a>
+        <a href="#!about">about</a>
+        <a href="#!me">me</a>
+    </div>
+
+    
+</body>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-route.js"></script>
+    <script src="./js/controller.js"></script>
+</html>
