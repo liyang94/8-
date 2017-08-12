@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 44px;
+    }
+    .footer div{
+        flex: 1;
+        text-align: center;
+    }
+    .active{
+        background:yellow
+    }
+    </style>
+</head>
+<body ng-controller="controller">
+    <ui-view></ui-view>
+    <div class="footer">
+        <div ui-sref="home" ui-sref-active="active">home</div>
+        <div ui-sref="about" ui-sref-active="active">about</div>
+        <div ui-sref="me" ui-sref-active="active">me</div>
+    </div>
+</body>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-ui-router.js"></script>
+    <script src="./js/controller.js"></script>
+</html>
