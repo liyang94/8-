@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctl">
+    <div header style="position: fixed;top: 0;left: 0;" id="op"></div>
+<section>
+    <div class="picTop">
+        <img src="images/1_01.png" alt="">
+    </div>
+    
+    <nav>
+        <dl>
+            <dd>53</dd>
+            <dt>灵感</dt>
+        </dl>
+        <dl>
+            <dd>77</dd>
+            <dt>旅行家</dt>
+
+        </dl>
+        <dl>
+            <dd>23</dd>
+            <dt>国家</dt>
+
+        </dl>
+        <dl>
+            <dd>55</dd>
+            <dt>城市</dt>
+
+        </dl>
+
+    </nav>
+
+    <div class="nav2"><span>主题</span></div>
+    <div class="tab">
+        <span ui-sref="piao" ui-sref-active="high">漂流</span>
+        <span ui-sref="gu" ui-sref-active="high">古城古</span>
+        <span ui-sref="bi" ui-sref-active="high">避暑</span>
+        <span ui-sref="tian" ui-sref-active="high">田园</span>
+        <span ui-sref="you" ui-sref-active="high">游乐场</span>
+        <span ui-sref="nong" ui-sref-active="high">农家乐</span>
+        <span class="iconfont icon-angleleft"></span>
+    </div>
+    <div ui-view>
+        
+    </div>
+</section>
+<footer>
+    <dl style="color: orange;">
+        <dt class="iconfont icon-shouji" ></dt>
+        <dd>首页</dd>
+    </dl>
+    <dl>
+        <dt class="iconfont icon-boat__easyico"></dt>
+        <dd>目的地</dd>
+    </dl>
+    <dl>
+        <dt class="iconfont icon-car__easyicon"></dt>
+        <dd>自驾</dd>
+    </dl>
+</footer>
+    <script type="text/javascript">
+        var app=angular.module('myapp',['ui.router']);
+            app.controller('myctl',function($scope,$http){
+                $http.get('list.json').success(function(obj){
+                    $scope.obj=obj
+
+                })
+
+            })
+            app.config(function($stateProvider,$urlRouterProvider){
+                $stateProvider.state('piao',{
+                    url:"/piao",
+                    templateUrl:"page/piao.html"
+                })
+                .state('gu',{
+                    url:"/gu",
+                    templateUrl:"page/gu.html"
+                })
+
+                .state('bi',{
+                    url:"/bi",
+                    templateUrl:"page/bi.html"
+                })
+
+                .state('tian',{
+                    url:"/tian",
+                    templateUrl:"page/tian.html"
+                })
+
+                .state('you',{
+                    url:"/you",
+                    templateUrl:"page/you.html",
+
+                })
+
+                .state('nong',{
+                    url:"/nong",
+                    templateUrl:"page/nong.html"
+                })
+
+                $urlRouterProvider.otherwise('/bi')
+
+            })
+
+            app.directive("header",function(){
+                return {
+                    restrict:'AE',
+                    replace:true,
+                    templateUrl:"page/header.html",
+                    link:function(scope,element,attrs){
+                        var section=document.querySelector('section')
+                        var op=document.querySelector('#op');
+                        var tab=document.querySelector('.tab')
+                            section.onscroll=function(){
+                                op.style.opacity=(1-(tab.getBoundingClientRect().top/359))
+                                if(tab.getBoundingClientRect().top<element[0].clientHeight){
+                                    tab.style.position="fixed"
+                                    tab.style.left="0"
+                                    tab.style.top=".44rem"
+                                    tab.style.zIndex=999
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        tab.style.position=""
+                                    },1)
+                                }
+                            }
+
+
+                        // $('section').on('scroll',function(){
+                        //     $('#op').css('opacity',(1-($('.tab').offset().top/359)))
+                        //     $
+            
+                        // })
+                    }
+                        
+                }
+                
+            })
+
+            // $(function(){
+
+            // })
+    </script>
+</body>
+</html>
