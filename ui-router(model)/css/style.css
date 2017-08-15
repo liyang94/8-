@@ -1,0 +1,94 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.container{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction:column;
+	font-size: .16rem
+}
+
+nav{
+	width: 100%;
+	height: .44rem;
+	background: orange;
+	display: flex;
+	
+
+}
+nav div{
+	flex:1;
+	text-align: center;
+	line-height: .44rem;
+	border: 1px solid white;
+	font-size: 22px;
+	color: white;
+	font-weight: bold;
+}
+
+.home{
+	width: 100%;
+	height: 500px;
+	background: red;
+	line-height: 500px;
+	text-align: center;
+}
+
+.wode{
+	width: 100%;
+	height: 500px;
+	background: green;
+	text-align: center;
+}
+
+.wode .left{
+	width: 40%;
+	height: 80px;
+	float: left;
+}
+.wode .left div{
+	text-align: center;
+	width: 100%;
+	height: 50%;
+	line-height:40px; 
+	border: 2px solid limegreen;
+	box-sizing:border-box;
+}
+
+
+
+.wode .right{
+	float: right;
+	width: 60%;
+	height: 80px;
+}
+.wode .right div{
+	width: 100%;
+	height: 100%;
+	border: 2px solid limegreen;
+	box-sizing:border-box;
+	text-align: center;
+	line-height: 80px;
+	background: pink;
+}
+.xiangqing{
+	width: 100%;
+	height: 500px;
+	background: blue;
+	line-height: 500px;
+	text-align: center;
+}
+
+.high{
+	background: limegreen;
+	color: white;
+}
+
+.high2{
+	background: skyblue;
+	color: white;
+}

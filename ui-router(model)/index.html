@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myapp">
+<div class="container" ng-controller="myctl">
+	<nav>
+		<div ui-sref-active="high" ui-sref="home">家人</div>
+		<div ui-sref-active="high" ui-sref="wode">我的</div>
+		<div ui-sref-active="high" ui-sref="xiangqing">详情</div>
+	</nav>
+	
+	<div ui-view></div>
+</div>
+	
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script>
+	var app=angular.module('myapp',['ui.router']);
+		app.controller('myctl',function($scope){
+
+		})
+
+		app.config(function($stateProvider,$urlRouterProvider){
+		    $urlRouterProvider.otherwise('/wode')
+			$urlRouterProvider.when('/wode','/wode/xingge')
+			$stateProvider.state('home',{
+				url:"/home",
+				templateUrl:"./view/home.html"
+			})
+			.state('wode',{
+				url:"/wode",
+				templateUrl:"./view/wode.html"
+			})
+
+			.state('wode.xihao',{
+				url:"/xihao",
+				templateUrl:"./view/template/xihao.html"
+			})
+
+			.state('wode.xingge',{
+				url:"/xingge",
+				templateUrl:"./view/template/xingge.html"
+			})
+			.state('xiangqing',{
+				url:"/xiangqing",
+				templateUrl:"./view/xiangqing.html"
+			})
+
+		})
+
+
+</script>
+</body>
+</html>
