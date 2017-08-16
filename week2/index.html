@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body ng-app="myapp">
+<div class="container" ng-controller="myctl">
+    <header>
+        <span class="sp1">悟空租车</span>
+        <i class="iconfont icon-wode i1" ng-click="click()"></i>
+        <i class="iconfont icon-xinxi1 i2"></i>
+        <img src="images/2_02.png" alt="">
+    </header>
+    <section>
+        <nav>
+            <span class="sp2">快捷租车</span>
+            <span class="sp3">自驾游</span>
+        </nav>
+        <div class="box">
+            <div class="scroller">
+
+                <div class="bus">
+                    <dl>
+                        <dt>
+                            取车时间
+                        </dt>
+                        <dd>
+                            08/10
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            周四
+                        </dt>
+                        <dd>
+                            00:10
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            还车时间
+                        </dt>
+                        <dd>
+                            08/11
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            周五
+                        </dt>
+                        <dd>
+                            08:10
+                        </dd>
+                    </dl>
+                </div>
+                <button>确定</button>
+                <div class="iconlist">
+                    <p class="p1">
+                        <img src="images/4_03.png" alt="">
+                        <span class="jingxuan">精选必玩 限时特惠 </span>
+                        <i class="i3 iconfont icon-angleleft"></i>
+                    </p>
+                    <div class="ic">
+                        <dl>
+                            <dt><img src="images/3_03.png" alt=""></dt>
+                            <dd>网店</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/3_05.png" alt=""></dt>
+                            <dd>长足</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/3_07.png" alt=""></dt>
+                            <dd>发现</dd>
+                        </dl>
+                        <dl>
+                            <dt><img src="images/3_09.png" alt=""></dt>
+                            <dd>常见问题</dd>
+                        </dl>
+                    </div>
+                </div>
+               
+                <div picimgs></div>
+                <div picimgs></div>
+                <div picimgs></div>
+                
+                
+            </div>
+        </div>
+
+    </section>
+</div>
+<div class="container2" ng-controller="myctl2">
+<div class="left">
+<header>
+<dl>
+    <dt>
+        <img src="images/6_03.png" alt="">
+    </dt>
+    <dd><span>登陆/注册</span></dd>
+
+</dl>
+</header>
+<section>
+    <ul>
+        <li><i class="iconfont icon-shouji"></i><span>我的钱包</span><i class="i4 iconfont icon-angleleft"></i></li>
+        <li><i class="iconfont icon-search"></i><span>我的钱包</span><i class="i4 iconfont icon-angleleft"></i></li>
+        <li><i class="iconfont icon-xinxi"></i><span>我的钱包</span><i class="i4 iconfont icon-angleleft"></i></li>
+        <li><i class="iconfont icon-wode"></i><span>我的钱包</span><i class="i4 iconfont icon-angleleft"></i></li>
+        <li><i class="iconfont icon-boat__easyico1"></i><span>我的钱包</span><i class="i4 iconfont icon-angleleft"></i></li>
+    </ul>
+</section>
+</div>
+<div class="right" ng-click="zhe()">
+
+</div>
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.16rem; }
+  .container header {
+    position: relative;
+    width: 100%;
+    height: 2rem; }
+    .container header img {
+      width: 100%;
+      height: 100%; }
+    .container header .sp1 {
+      display: inline-block;
+      width: 1.3rem;
+      height: 0.5rem;
+      text-align: center;
+      line-height: 0.5rem;
+      color: #ffffff;
+      position: absolute;
+      left: 50%;
+      margin-left: -0.65rem; }
+    .container header .i1 {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      font-size: 22px;
+      color: #ffffff; }
+    .container header .i2 {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 22px;
+      color: #ffffff; }
+  .container section {
+    flex: 1;
+    background: #fafafa;
+    overflow: auto; }
+    .container section nav {
+      width: 100%;
+      height: 0.5rem;
+      display: flex; }
+      .container section nav span {
+        flex: 1;
+        text-align: center;
+        line-height: 0.5rem; }
+      .container section nav .sp2 {
+        background: #ffffff;
+        color: #cb2b1f; }
+      .container section nav .sp3 {
+        background: #142215;
+        color: #ffffff; }
+    .container section .box {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative; }
+      .container section .box .scroller {
+        position: absolute;
+        width: 100%;
+        height: 1200px; }
+        .container section .box .scroller .bus {
+          width: 100%;
+          height: 1.3rem;
+          display: flex; }
+          .container section .box .scroller .bus dl {
+            flex: 1;
+            text-align: center;
+            border-bottom: 1px solid #b2b2b2; }
+            .container section .box .scroller .bus dl dt {
+              line-height: 0.6rem;
+              color: #b2b2b2;
+              font-size: 20px; }
+            .container section .box .scroller .bus dl dd {
+              line-height: 0.7rem;
+              font-size: 22px; }
+        .container section .box .scroller button {
+          width: 80%;
+          height: 0.5rem;
+          background: #cb2b1f;
+          text-align: center;
+          line-height: 0.5rem;
+          color: white;
+          outline: none;
+          border: none;
+          margin-left: 10%;
+          margin-top: 0.4rem; }
+        .container section .box .scroller .iconlist {
+          width: 100%; }
+          .container section .box .scroller .iconlist .p1 {
+            background: white;
+            width: 100%;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            position: relative; }
+            .container section .box .scroller .iconlist .p1 img {
+              position: absolute;
+              left: 15px;
+              top: 10px;
+              width: 1.2rem;
+              height: 0.35rem; }
+            .container section .box .scroller .iconlist .p1 .jingxuan {
+              position: absolute;
+              right: 60px; }
+            .container section .box .scroller .iconlist .p1 .i3 {
+              position: absolute;
+              right: 20px;
+              transform: rotate(-90deg);
+              font-size: 22px; }
+          .container section .box .scroller .iconlist .ic {
+            display: flex;
+            background: #ffffff;
+            width: 100%;
+            height: auto; }
+            .container section .box .scroller .iconlist .ic dl {
+              flex: 1;
+              text-align: center; }
+              .container section .box .scroller .iconlist .ic dl dt img {
+                width: 0.6rem; }
+        .container section .box .scroller .pic {
+          width: 100%;
+          height: auto;
+          background: #ffffff; }
+          .container section .box .scroller .pic dl {
+            width: 100%; }
+            .container section .box .scroller .pic dl dt {
+              width: 100%; }
+              .container section .box .scroller .pic dl dt img {
+                width: 90%;
+                height: 2.2rem;
+                margin-left: 5%; }
+            .container section .box .scroller .pic dl dd {
+              color: #444444;
+              font-size: 16px;
+              text-align: left;
+              margin-left: 15px;
+              line-height: 0.55rem; }
+
+.container2 {
+  width: 100%;
+  height: 100%;
+  font-size: 0.16rem;
+  position: absolute;
+  left: -100%;
+  top: 0; }
+  .container2 .left {
+    float: left;
+    width: 66%;
+    height: 100%;
+    background: #ffffff; }
+    .container2 .left header {
+      height: 1.65rem;
+      width: 100%;
+      background: #cb2a1e; }
+      .container2 .left header dl dt {
+        float: left; }
+        .container2 .left header dl dt img {
+          width: 0.9rem;
+          margin-left: 0.33rem;
+          margin-top: 0.36rem; }
+      .container2 .left header dl dd {
+        color: #ffffff; }
+        .container2 .left header dl dd span {
+          display: inline-block;
+          width: 100px;
+          height: 40px;
+          line-height: 40px;
+          border: 1px solid #cccccc;
+          text-align: center;
+          margin-top: 0.6rem; }
+    .container2 .left section {
+      width: 100%;
+      height: 75%; }
+      .container2 .left section ul li {
+        width: 100%;
+        line-height: 50px;
+        position: relative; }
+        .container2 .left section ul li .i4 {
+          position: absolute;
+          right: 15px;
+          top: 5px;
+          transform: rotate(-180deg); }
+  .container2 .right {
+    float: right;
+    width: 34%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5; }
+
+/*# sourceMappingURL=style.css.map */
