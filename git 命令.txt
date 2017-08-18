@@ -1,0 +1,32 @@
+***github有三个区
+<1>暂存区
+<2>本地仓库
+<3>远端仓库
+
+linux 命令
+1> calc  : 打开计算机
+2> cmd : 打开node命令窗口快捷键
+3> window+r : 打开运行窗口
+4> pwd : 查看当前路径
+5> ls : 查看当前目录
+6> cd : 进入到指定文件夹
+7> touch : 创建文件
+8> mkdir : 创建文件夹
+9> git add . : 添加文件或文件夹到暂存区
+10> git status ：查看当前状态
+11> git commit -m "注释"：添加文件到本地仓库
+12> git push ：推送文件到远端（remote）
+13> git clone url ：将远端仓库克隆到本地
+14> git log : 查看提交日志
+15> git reset --hard 5d码 ：回滚到某历史版本
+16> ctl + c 终止命令
+17> git branch A 创建A分支在本地
+18> git branch -d A 删除A分支在本地
+19> git push origin A    将本地分支发布到远端
+20> git push origin :A   删除远端分支
+21> exit 退出git命令行
+22> git checkout A 切换到A分支
+23> git push --set-upstream origin A 将文件推送到远端分支
+24> git rebase master 合并主干文件到分支
+25> git merge A 合并分支文件到主干
+26> ***有分支的时候一定要先合并分支再提交避免冲突
