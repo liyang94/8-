@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .pageControl{
+            position: fixed;
+            left: 0;
+            bottom:0;
+        }
+        .item{
+            float: left;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border:1px solid black;
+            margin: 2px;
+        }
+        .content{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body ng-controller="main">
+    <div class="content">
+        {{data}}
+    </div>
+    <div class="pageControl" ng-show="maxPage">
+        <div class="item" ng-click="goToPrevious()" ng-show="currentPage>1">上一页</div>
+        <div class="item active" ng-click="go(1)">1</div>
+        <div class="item" ng-show="previous">...</div>
+        <div class="item" ng-click="go(value)" ng-class="{{'active'+$index}}" ng-repeat="value in array track by $index">{{value}}</div>
+        <div class="item" ng-show="next">...</div>
+        <div class="item" ng-click="go(maxPage)" ng-show="maxPage>1">{{maxPage}}</div>
+        <div class="item" ng-click="goToNext()" ng-show="currentPage<maxPage">下一页</div>
+    </div>
+</body>
+    <script src="./js/angular.min.js"></script>
+</html>
+<script>
+    var app = angular.module('app',[]);
+    app.value('domServer',{
+        domArray:[]
+    })
+    .factory('resetPageControlArray',function(){
+        return {
+            init:function(maxPage){
+                var array = [];
+                var next = false;
+                if(maxPage>6){
+                    array = new Array(4);
+                    next = true;
+                }else if(maxPage>=2){
+                    array = new Array(maxPage-2);
+                }
+                for(var i = 0 ,length = array.length ; i<length ; i++){
+                    array[i] = i+2;
+                }      
+                return [array,next];          
+            },
+            reset:function(array, operator){
+                    angular.forEach(array,function(value,index,array){
+                        array[index] = value+operator;
+                    })
+                return [array,true];
+            }
+        }
+    })
+    .run(function(domServer){
+        var buttonList = document.querySelectorAll('.item');
+        domServer.firstPageButton = buttonList[1];
+        domServer.lastPageButton = buttonList[buttonList.length-2];
+        domServer.domArray.push(domServer.firstPageButton);
+        domServer.domArray.push(domServer.lastPageButton);
+    })
+    .controller('main',function($scope,$timeout,$http,resetPageControlArray,domServer){
+            $scope.maxPage = 10;
+            //加载首屏
+            $scope.data = 1;
+            $scope.currentPage = 1;
+            var obj = resetPageControlArray.init($scope.maxPage);
+            $scope.array = obj[0];
+            $scope.next = obj[1];
+            $scope.go = function(value,option){
+
+                console.log(this.$index)
+
+                angular.forEach($scope.array,function(value,index){
+                    $scope['active'+index] = '';
+                })
+                $scope['active'+this.$index] = 'active';
+                angular.forEach(domServer.domArray,function(value){
+                    value.className = 'item';
+                })
+
+                $scope.currentPage = value;
+                // $timeout(function(){
+                    $scope.data = $scope.currentPage;
+                // },300)
+                if($scope.currentPage == $scope.array[0] && $scope.currentPage>2) {
+                    var obj = resetPageControlArray.reset($scope.array,-1)
+                    //数组减一
+                    $scope.array = obj[0];
+                    $scope.next = obj[1];
+                    angular.forEach($scope.array,function(value,index,array){
+                        if(index==0){
+                            $scope['active'+index] = ''
+                        } else if(index==1){
+                            $scope['active'+index] = 'active'
+                        }
+                    })
+                }else if($scope.currentPage == $scope.array[$scope.array.length-1] && $scope.currentPage<$scope.maxPage-1) {
+                    var obj = resetPageControlArray.reset($scope.array,1)
+                    //数组加一
+                    angular.forEach($scope.array,function(value,index,array){
+                        if(index==array.length-1){
+                            $scope['active'+index] = ''
+                        } else if(index==array.length-2){
+                            $scope['active'+index] = 'active'
+                        }
+                    })
+                    $scope.array = obj[0];
+                    $scope.previous = obj[1];   
+                }
+                if($scope.array[0] == 2){
+                    $scope.previous = false;
+                } 
+                if($scope.array[$scope.array.length-1] == $scope.maxPage-1){
+                    $scope.next = false;
+                }
+                if(value == 1){
+                    $scope.previous = false;
+                    var obj =  resetPageControlArray.init($scope.maxPage);
+                    $scope.array = obj[0];
+                    $scope.next = obj[1];
+                    angular.forEach($scope.array,function(value,index){
+                    $scope['active'+index] = '';
+                    })
+                    domServer.firstPageButton.className= "item active";
+                }else if(value == $scope.maxPage){
+                    $scope.next = false;
+                    if($scope.maxPage>6){
+                        $scope.previous = true;
+                    }
+                    for(var i = $scope.array.length-1; i>=0; i--){
+                        $scope.array[i] = $scope.maxPage - ($scope.array.length - i);
+                    }
+                    angular.forEach($scope.array,function(value,index){
+                        $scope['active'+index] = '';
+                    })                    
+                    domServer.lastPageButton.className = 'item active';
+                }
+
+            }
+            $scope.goToPrevious = function(){
+                $scope.currentPage--;
+                angular.forEach($scope.array,function(value,index,array){
+                    if($scope.currentPage == value){
+                        $scope.$index = index;
+                    }
+                })
+                $scope.go($scope.currentPage)
+            }
+            $scope.goToNext=function(){
+                $scope.currentPage++;
+                angular.forEach($scope.array,function(value,index,array){
+                    if($scope.currentPage == value){
+                        $scope.$index = index;
+                    }
+                })
+                $scope.go($scope.currentPage)                
+            }
+    })
+</script>

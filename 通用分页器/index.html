@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .pageControl{
+            position: fixed;
+            left: 0;
+            bottom:0;
+        }
+        .item{
+            float: left;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border:1px solid black;
+            margin: 2px;
+        }
+        .content{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 50px;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body ng-controller="main">
+    <div class="content">
+       <div ng-repeat="item in data.data">
+           {{item}}
+       </div>
+    </div>
+    <page-control  
+    max-page="10" 
+    box-class="pageControl" 
+    item-class="item" 
+    active-class="active" 
+    data="data" 
+    show-number-button="6" 
+    method='POST'
+    url="{{url}}"
+    params="{{params}}"
+
+    >
+    </page-control>
+
+</body>
+    <script src="./js/angular.min.js"></script>
+    <script src="./directive/directive.js"></script>
+</html>
+<script>
+    var app = angular.module('app',['pageControl'])
+                     .controller('main',function($scope){
+                        $scope.url = 'http://localhost:8030/history';
+                        $scope.params = {
+                            userId:002,
+                            showPage:5,
+                            currentPage:1
+                        }
+                     })
+</script>
