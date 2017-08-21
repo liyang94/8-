@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myapp">
+<ui-view>
+
+</ui-view>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script>
+
+        var app=angular.module('myapp',['ui.router']);
+            app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+                $urlRouterProvider.otherwise('/shouye')
+                $stateProvider.state('chong',{
+                    url:'/chong',
+                    templateUrl:'./view/chong.html',
+                    controller:'chongCtl'
+                })
+                        .state('shouye',{
+                            url:"/shouye",
+                            templateUrl:"./view/shouye.html"
+
+                        })
+
+                        .state('page1',{
+                            url:"/page1",
+                            templateUrl:"./view/page1.html"
+
+                        })
+                        .state('page2',{
+                            url:"/page2",
+                            templateUrl:"./view/page2.html"
+
+                        })
+                        .state('page3',{
+                            url:"/page3",
+                            templateUrl:"./view/page3.html"
+
+                        })
+                        .state('page4',{
+                            url:"/page4",
+                            templateUrl:"./view/page4.html"
+
+                        })
+            }])
+
+        app.controller('chongCtl',['$scope',function($scope){
+
+            $scope.dom=false
+
+            $scope.dianji=function(){
+                if($scope.val.length==11){
+                    $scope.dom=false
+                }else{
+                    $scope.dom=true
+                }
+
+            }
+
+        }])
+        app.directive('footers',[function(){
+            return {
+                restrict:"AE",
+                replace:true,
+                templateUrl:'./view/template/footers.html'
+            }
+        }])
+
+        app.directive('zhe',[function(){
+            return {
+                restrict:"AE",
+                replace:true,
+                templateUrl:'./view/template/zhe.html'
+            }
+        }])
+
+    </script>
+</body>
+</html>

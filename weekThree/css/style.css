@@ -1,0 +1,119 @@
+html, body {
+  width: 100%;
+  height: 100%; }
+  html .container, body .container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.16rem; }
+    html .container header, body .container header {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border: none; }
+      html .container header .chong, body .container header .chong {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 246px;
+        margin-left: -25px; }
+      html .container header img, body .container header img {
+        width: 100%;
+        height: 3.5rem; }
+      html .container header .i1, html .container header .i2, html .container header .i3, body .container header .i1, body .container header .i2, body .container header .i3 {
+        position: absolute;
+        top: 15px;
+        font-size: 22px; }
+      html .container header .i1, body .container header .i1 {
+        left: 15px; }
+      html .container header .i3, body .container header .i3 {
+        right: 15px; }
+      html .container header .i2, body .container header .i2 {
+        right: 50px; }
+    html .container .section, body .container .section {
+      width: 100%;
+      height: 700px; }
+    html .container section, body .container section {
+      flex: 1;
+      overflow: auto;
+      background: #f7f8f9; }
+      html .container section .main, body .container section .main {
+        width: 100%; }
+        html .container section .main img, body .container section .main img {
+          width: 100%;
+          height: 3rem; }
+    html .container footer, body .container footer {
+      height: 0.66rem;
+      display: flex; }
+      html .container footer dl, body .container footer dl {
+        flex: 1;
+        text-align: center; }
+        html .container footer dl dt img, body .container footer dl dt img {
+          width: 0.35rem; }
+        html .container footer dl dd, body .container footer dl dd {
+          font-size: 18px; }
+      html .container footer .high, body .container footer .high {
+        color: orange;
+        font-size: 20px; }
+  html .container1, body .container1 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.16rem; }
+    html .container1 header, body .container1 header {
+      height: 0.44rem;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      line-height: 0.44rem; }
+      html .container1 header .i6, body .container1 header .i6 {
+        position: absolute;
+        left: 15px;
+        color: orange;
+        font-size: 22px; }
+    html .container1 section, body .container1 section {
+      flex: 1;
+      overflow: auto;
+      position: relative; }
+      html .container1 section .phone, body .container1 section .phone {
+        width: 318px;
+        height: 34px;
+        position: absolute;
+        left: 30%;
+        top: 53px;
+        margin-left: -100px;
+        border: none;
+        outline: none;
+        border: 1px solid #cccccc; }
+      html .container1 section .zhe, body .container1 section .zhe {
+        width: 200px;
+        height: 60px;
+        background: #000;
+        opacity: 0.5;
+        position: absolute;
+        left: 50%;
+        top: 300px;
+        margin-left: -100px;
+        text-align: center;
+        line-height: 60px;
+        color: #ffffff; }
+      html .container1 section img, body .container1 section img {
+        width: 100%;
+        height: 6rem; }
+      html .container1 section button, body .container1 section button {
+        width: 90%;
+        height: 46px;
+        background: orange;
+        position: absolute;
+        bottom: 98px;
+        color: #ffffff;
+        left: 5%; }
+
+/*# sourceMappingURL=style.css.map */
