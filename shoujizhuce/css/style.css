@@ -1,0 +1,90 @@
+@import url(reset.css);
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html, body, .wrap {
+  width: 100%;
+  height: 100%;
+  font-size: .16rem;
+  background: #EEE;
+  overflow: hidden; }
+
+input, button, select, textarea, a {
+  outline: none;
+  border: none;
+  background: none; }
+
+.wrap {
+  display: flex;
+  flex-direction: column; }
+
+.header, .footer {
+  width: 100%;
+  height: 50px;
+  background: #fff; }
+
+.header {
+  text-align: center;
+  line-height: 50px; }
+
+.main {
+  flex: 1; }
+  .main h6 {
+    font-size: 12px;
+    padding: 10px;
+    color: red; }
+
+.tops {
+  width: 100%;
+  background: #fff; }
+
+.inp1 {
+  padding: 15px;
+  border-bottom: 1px solid #ccc; }
+  .inp1 input {
+    width: 100%; }
+
+.inp3 {
+  display: flex; }
+  .inp3 input {
+    flex: 1;
+    padding-left: 10px; }
+  .inp3 span {
+    width: 1rem;
+    height: .50rem;
+    text-align: center;
+    line-height: .50rem;
+    border-left: 1px solid #ccc; }
+    .inp3 span a {
+      padding: 5px;
+      background: red;
+      color: #fff; }
+
+.btn {
+  width: 100%;
+  margin-top: .2rem; }
+  .btn button {
+    width: 90%;
+    margin-left: 5%;
+    background: red;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px; }
+
+.footer {
+  width: 100%;
+  display: flex; }
+  .footer a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; }
+    .footer a i {
+      font-size: 24px; }
+
+/*# sourceMappingURL=style.css.map */
