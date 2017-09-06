@@ -1,0 +1,23 @@
+<style>
+    .discover-nav{
+        display:flex;
+        height: 0.8rem;
+    }
+    .discover-nav-item{
+        flex: 1;
+        text-align: center;
+        line-height: 0.8rem;
+    }
+    .discover-nav-item-active{
+        color: #c83a39;
+        border-bottom: .02rem solid #c83a39;
+        height: .78rem;
+
+    }
+</style>
+<div>
+    <div class="discover-nav">
+        <div ng-repeat="item in discoverItemArray" class="discover-nav-item" ui-sref-active="discover-nav-item-active" ui-sref="{{discoverSubRouteName[$index]}}">{{item}}</div>
+    </div>
+    <ui-view></ui-view>
+</div>
