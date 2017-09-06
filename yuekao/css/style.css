@@ -1,0 +1,243 @@
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.16rem; }
+  .container header {
+    position: relative;
+    width: 100%; }
+    .container header .swiper-container .swiper-wrapper .swiper-slide img {
+      width: 100%;
+      height: 2.5rem; }
+    .container header .p1 {
+      width: 100%;
+      height: 0.35rem;
+      line-height: 0.35rem; }
+      .container header .p1 .sp1 {
+        color: #df2d23;
+        float: left;
+        font-size: 22px; }
+      .container header .p1 .sp2 {
+        float: right;
+        color: #595a5c;
+        font-size: 18px; }
+    .container header .p2 {
+      height: 0.2rem;
+      line-height: 0.2rem;
+      width: 100%;
+      font-weight: bold;
+      font-size: 16px; }
+    .container header .p3 {
+      color: #595a5c;
+      font-size: 18px; }
+    .container header .img1 {
+      position: absolute;
+      right: 25px;
+      bottom: 20px;
+      width: 0.75rem;
+      height: 0.75rem; }
+  .container section {
+    flex: 1;
+    overflow: auto;
+    background: #f2f2f2;
+    position: relative; }
+    .container section .zhe {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      margin-left: -50px;
+      background: #000;
+      opacity: 0.5; }
+    .container section .qinglist {
+      width: 100%; }
+      .container section .qinglist .img2 {
+        width: 100%;
+        height: 1.2rem; }
+    .container section .pinlist {
+      width: 100%; }
+      .container section .pinlist .p4 {
+        background: #ffffff;
+        width: 100%;
+        height: 0.44rem;
+        line-height: 0.44rem;
+        text-align: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        position: relative;
+        border-bottom: 1px solid #cccccc; }
+        .container section .pinlist .p4 .icon-angleleft {
+          position: absolute;
+          right: 15px;
+          transform: rotate(180deg);
+          color: #9c9c9c; }
+        .container section .pinlist .p4 span {
+          color: #9c9c9c;
+          float: right;
+          margin-right: 40px; }
+      .container section .pinlist .img4 {
+        width: 100%;
+        z-index: -1; }
+    .container section .pingjia {
+      width: 100%; }
+      .container section .pingjia .p5 {
+        z-index: 0;
+        background: #ffffff;
+        width: 100%;
+        height: 0.44rem;
+        line-height: 0.44rem;
+        text-align: left;
+        padding-left: 15px;
+        box-sizing: border-box;
+        position: relative;
+        border-bottom: 1px solid #cccccc; }
+        .container section .pingjia .p5 .icon-angleleft {
+          position: absolute;
+          right: 15px;
+          transform: rotate(180deg);
+          color: #9c9c9c; }
+        .container section .pingjia .p5 span {
+          color: #9c9c9c;
+          float: right;
+          margin-right: 40px; }
+      .container section .pingjia .img6 {
+        width: 100%; }
+  .container footer {
+    width: 100%;
+    height: 0.6rem;
+    display: flex; }
+    .container footer span:nth-child(1) {
+      flex: 1.5;
+      background: white;
+      display: flex; }
+      .container footer span:nth-child(1) .high {
+        color: #e02e24; }
+      .container footer span:nth-child(1) dl {
+        flex: 1; }
+        .container footer span:nth-child(1) dl dt img {
+          width: 0.3rem; }
+        .container footer span:nth-child(1) dl dd {
+          color: #59595b; }
+    .container footer span:nth-child(2) {
+      flex: 1;
+      background: #f2aba7; }
+      .container footer span:nth-child(2) .p6 {
+        text-align: center;
+        line-height: 0.3rem;
+        color: #ffffff;
+        font-weight: bold; }
+    .container footer span:nth-child(3) {
+      flex: 1.5;
+      background: #e02e24; }
+      .container footer span:nth-child(3) .p6 {
+        text-align: center;
+        line-height: 0.3rem;
+        color: #ffffff;
+        font-weight: bold; }
+
+.container2 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.16rem; }
+  .container2 header {
+    width: 100%;
+    background: white;
+    position: relative; }
+    .container2 header .i8 {
+      position: absolute;
+      left: 50%;
+      top: 130px;
+      font-size: 22px;
+      margin-left: -11px;
+      transform: rotate(-90deg); }
+    .container2 header .pp {
+      position: relative;
+      height: 0.44rem;
+      line-height: 0.44rem;
+      text-align: center; }
+      .container2 header .pp .icon-angleleft {
+        position: absolute;
+        left: 15px;
+        font-size: 22px; }
+      .container2 header .pp .icon-search {
+        position: absolute;
+        right: 15px; }
+    .container2 header .pingjialist {
+      width: 100%;
+      height: 0.6rem; }
+      .container2 header .pingjialist span {
+        float: left;
+        width: 20%;
+        height: 0.25rem;
+        margin-left: 4%;
+        border-radius: 5px;
+        background: #fceae9;
+        text-align: center;
+        line-height: 0.25rem;
+        color: #58595b; }
+  .container2 section .zhe {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -50px;
+    background: #000;
+    opacity: 0.5; }
+  .container2 section .img8 {
+    width: 100%; }
+  .container2 footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.6rem;
+    display: flex; }
+    .container2 footer span:nth-child(1) {
+      flex: 1.5;
+      background: white;
+      display: flex; }
+      .container2 footer span:nth-child(1) .high {
+        color: #e02e24; }
+      .container2 footer span:nth-child(1) dl {
+        flex: 1; }
+        .container2 footer span:nth-child(1) dl dt img {
+          width: 0.3rem; }
+        .container2 footer span:nth-child(1) dl dd {
+          color: #59595b; }
+    .container2 footer span:nth-child(2) {
+      flex: 1;
+      background: #f2aba7; }
+      .container2 footer span:nth-child(2) .p6 {
+        text-align: center;
+        line-height: 0.3rem;
+        color: #ffffff;
+        font-weight: bold; }
+    .container2 footer span:nth-child(3) {
+      flex: 1.5;
+      background: #e02e24; }
+      .container2 footer span:nth-child(3) .p6 {
+        text-align: center;
+        line-height: 0.3rem;
+        color: #ffffff;
+        font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */

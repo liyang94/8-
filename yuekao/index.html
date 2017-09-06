@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="myapp">
+
+    <ui-view>
+
+    </ui-view>
+
+
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script>
+
+
+    var app=angular.module('myapp',['ui.router']);
+        app.directive('footers',[function(){
+            return {
+                restrict:'AE',
+                replace:true,
+                templateUrl:'./view/template/footers.html'
+            }
+        }])
+
+        app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+            $urlRouterProvider.otherwise('/shouye')
+            $stateProvider.state('shouye',{
+                url:'/shouye',
+                templateUrl:'./view/shouye.html',
+                controller:function($scope){
+                    var myswiper=new Swiper('.swiper-container',{
+                        autoplay:1000,
+                        loop:true
+                    })
+
+                    $scope.zhe=false;
+                    $scope.shoucang=function(){
+                        $scope.zhe=!$scope.zhe;
+
+                    }
+                }
+            })
+
+            .state('pingjia',{
+                url:'/pingjia',
+                templateUrl:'./view/pingjia.html',
+                controller:function($scope){
+                    $scope.realy=false;
+                    $scope.dianji=function(){
+                        $scope.realy=!$scope.realy;
+
+
+                    }
+                    $scope.zhe=false;
+                    $scope.shoucang=function(){
+                        $scope.zhe=!$scope.zhe;
+
+                    }
+                }
+            })
+        }])
+</script>
+</body>
+</html>
